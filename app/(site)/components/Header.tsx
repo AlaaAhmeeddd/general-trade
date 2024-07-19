@@ -26,21 +26,6 @@ function Header() {
             transition={{ duration: 1, type: "spring", stiffness: 50 }}
             className="container flex items-center justify-between py-4 mx-auto z-250"
           >
-            <div className="flex ">
-              <Link href="/">
-                <Image
-                  src="/shadel.png"
-                  alt="logo image"
-                  loading="lazy"
-                  width={150}
-                  height={54}
-                  className="object-contain sm:w-52 w-28 sm:ml-0 ml-5 max-w-[140px] "
-                ></Image>
-              </Link>
-            </div>
-            <div className="hidden lg:block">
-              <Search />
-            </div>
             <nav className="hidden lg:inline-flex">
               <ul className="flex items-center gap-4">
                 <div className="relative">
@@ -334,6 +319,22 @@ function Header() {
               </ul>
             </nav>
             <DropDown />
+            <div className="flex ">
+              <Link href="/">
+                <Image
+                  src="/shadel.png"
+                  alt="logo image"
+                  loading="lazy"
+                  width={150}
+                  height={54}
+                  className="object-contain sm:w-52 w-28 sm:ml-0 ml-5 max-w-[140px] "
+                ></Image>
+              </Link>
+            </div>
+            <div className="hidden lg:block">
+              <Search />
+            </div>
+            
           </m.header>
         </div>
       </nav>

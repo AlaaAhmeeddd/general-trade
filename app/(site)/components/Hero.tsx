@@ -5,7 +5,9 @@ import { useState, useEffect, useContext } from "react"
 import Link from "next/link"
 
 function Hero() {
-  return <LazyMotion features={domAnimation}></LazyMotion>
+  return <LazyMotion features={domAnimation}>
+    
+  </LazyMotion>
 }
 
 export default Hero
