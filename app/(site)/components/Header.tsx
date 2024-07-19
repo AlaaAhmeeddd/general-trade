@@ -14,7 +14,7 @@ function Header() {
   const pathName = usePathname();
 
   const handleMouseEnter = (isEnabled:boolean) => {
-    return (event: React.MouseEvent<HTMLAnchorElement>) => {
+    return () => {
       if (isEnabled) {
         setMenuOpen(true)
       }else{
@@ -30,7 +30,7 @@ function Header() {
             initial={{ y: -250 }}
             animate={{ y: 0 }}
             transition={{ duration: 1, type: "spring", stiffness: 50 }}
-            className="container flex items-center justify-between py-4 mx-auto z-250"
+            className="container flex items-center justify-between py-4 mx-auto px-4"
           >
             <nav className="hidden lg:inline-flex">
               <ul className="flex items-center gap-8">
@@ -43,7 +43,7 @@ function Header() {
                       {link.hasMenu && (
                         <RiArrowDropDownLine className="w-[30px] h-[30px] absolute top-[50%] -translate-y-[50%] -right-6" />
                       )}
-                      {menuOpen && (
+                      {menuOpen && link.hasMenu && (
                       <div className="absolute left-0 hidden mb-2 transition-opacity duration-300 bg-white rounded-lg shadow-lg w-60 top-full group-hover:block -z-10 group-hover:z-20">
                         <ul className="">
                           {
