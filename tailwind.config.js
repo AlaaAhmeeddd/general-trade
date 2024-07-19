@@ -31,6 +31,14 @@ module.exports = withMT({
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        "bg-primary": "#967F50",
+        "bg-secondary": "#faf3e6",
+        "bg-light-gray": "#A5A5A5",
+        "bg-accent": "413D37",
+        "text-primary": "#34312C",
+        "text-dark-gray": "#666563",
+      }
     },
   },
   plugins: [],

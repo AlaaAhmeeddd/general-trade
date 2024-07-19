@@ -6,7 +6,9 @@ import Link from "next/link"
 
 function Hero() {
   return <LazyMotion features={domAnimation}>
-    
+    <div className="bg-secondary">
+
+    </div>
   </LazyMotion>
 }
 

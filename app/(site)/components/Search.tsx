@@ -27,15 +27,23 @@ function Search({ setState }: props) {
   }
   return (
     <form onSubmit={submitHandler}>
-      <div className="flex flex-row px-4 bg-gray-200 rounded-full ">
+      <div className="flex px-4 rounded-full border-bg-light-gray border">
+        <input
+          type="text"
+          placeholder="Search..."
+          className="rounded-full text-lg px-4 py-2 outline-none sm:w-[150px] w-full xl:w-[260px] bg-transparent"
+          onChange={changeHandler}
+          required
+          value={searchValue}
+        />
         <button type="submit" className="outline-none">
           <span className="flex items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
-              width="30"
-              height="30"
+              width="25"
+              height="25"
               viewBox="0,0,256,256"
             >
               <g
@@ -60,14 +68,6 @@ function Search({ setState }: props) {
             </svg>
           </span>
         </button>
-        <input
-          type="text"
-          placeholder="Search By Name"
-          className=" bg-gray-200 rounded-full text-lg px-4 py-2 outline-none text-black sm:w-[150px] w-full xl:w-[260px] "
-          onChange={changeHandler}
-          required
-          value={searchValue}
-        />
       </div>
     </form>
   )
