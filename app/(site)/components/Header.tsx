@@ -25,18 +25,18 @@ function Header() {
   return (
     <LazyMotion features={domAnimation}>
       <nav>
-        <div className="fixed top-0 z-50 w-full bg-bg-secondary border-b border-bg-light-gray text-text-primary">
+        <div className="sticky top-0 py-4 px-4 z-50 w-full bg-secondary border-b border-light-gray text-basic-text">
           <m.header
             initial={{ y: -250 }}
             animate={{ y: 0 }}
             transition={{ duration: 1, type: "spring", stiffness: 50 }}
-            className="container flex items-center justify-between py-4 mx-auto px-4"
+            className="container flex items-center justify-between mx-auto"
           >
             <nav className="hidden lg:inline-flex">
               <ul className="flex items-center gap-8">
                 {
-                  navLinks.map((link, index)=>(
-                    <li key={index} className="relative flex items-center text-lg font-semibold group">
+                  navLinks.map((link, index) => (
+                    <li key={index} className="relative flex items-center text-base font-semibold group">
                       <Link href={link.href} onMouseEnter={handleMouseEnter(link.hasMenu)} className="capitalize">
                         {link.title}
                       </Link>
@@ -44,10 +44,9 @@ function Header() {
                         <RiArrowDropDownLine className="w-[30px] h-[30px] absolute top-[50%] -translate-y-[50%] -right-6" />
                       )}
                       {menuOpen && link.hasMenu && (
-                      <div className="absolute left-0 hidden mb-2 transition-opacity duration-300 bg-white rounded-lg shadow-lg w-60 top-full group-hover:block -z-10 group-hover:z-20">
-                        <ul className="">
-                          {
-                            productsType.map((type, index)=>(
+                        <div className="absolute left-0 hidden mb-2 transition-opacity duration-300 bg-white rounded-lg shadow-lg w-60 top-full group-hover:block -z-10 group-hover:z-20">
+                          <ul className="">
+                            {productsType.map((type, index) => (
                               <li key={index} className="text-sm duration-300 hover:bg-gray-100 hover:pl-2">
                                 <Link
                                   onClick={handleMouseEnter(false)}
@@ -57,16 +56,13 @@ function Header() {
                                   {type.title}
                                 </Link>
                               </li>
-                            ))
-                          }
-                        </ul>
-                      </div>
-                    )}
-                    {
-                      pathName === link.href && (
-                        <span className="w-full h-[1px] bg-text-primary absolute bottom-0 left-0" />
-                      )
-                    }
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      {pathName === link.href && (
+                        <span className="w-full h-[2px] bg-basic-text absolute bottom-0 left-0"></span>
+                      )}
                     </li>
                   ))
                 }

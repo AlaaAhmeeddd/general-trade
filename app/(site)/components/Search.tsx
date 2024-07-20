@@ -28,7 +28,7 @@ function Search({ setState, textStyle }: props) {
   }
   return (
     <form onSubmit={submitHandler}>
-      <div className={`flex px-4 rounded-full ${textStyle ? textStyle : 'border-bg-light-gray'} border`}>
+      <div className={`flex px-4 rounded-full ${textStyle ? textStyle : 'border-light-gray'} border`}>
         <input
           type="text"
           placeholder="Search..."

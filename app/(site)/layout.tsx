@@ -6,7 +6,7 @@ import Image from "next/image"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Shadel",
+  title: "General Trade",
   description:
     "Top-quality sheet and press metal solutions for stylish designs.",
   icons: {
