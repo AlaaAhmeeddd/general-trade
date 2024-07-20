@@ -4,7 +4,7 @@ import ProductMachineType from "@/types/Product"
 /* fetching data using groq all projects */
 async function getProducts(type: string | null): Promise<ProductMachineType[]> {
   const client = createClient({
-    projectId: "42h6u44a",
+    projectId: "ttl8khpq",
     apiVersion: "2023-07-19",
     dataset: "production",
   })
@@ -48,7 +48,7 @@ async function getProducts(type: string | null): Promise<ProductMachineType[]> {
 /* fetching data using groq specific projects */
 async function getProduct(id: string): Promise<ProductMachineType> {
   return createClient({
-    projectId: "42h6u44a",
+    projectId: "ttl8khpq",
     apiVersion: "2023-07-19",
     dataset: "production",
   }).fetch(
@@ -70,7 +70,7 @@ async function getProduct(id: string): Promise<ProductMachineType> {
 }
 async function getMachines(type: string | null): Promise<ProductMachineType[]> {
   const client = createClient({
-    projectId: "42h6u44a",
+    projectId: "ttl8khpq",
     apiVersion: "2023-07-19",
     dataset: "production",
   })
@@ -108,7 +108,7 @@ async function getMachines(type: string | null): Promise<ProductMachineType[]> {
   return client.fetch(query, params)
 
   return createClient({
-    projectId: "42h6u44a",
+    projectId: "ttl8khpq",
     apiVersion: "2023-07-19",
     dataset: "production",
   }).fetch(
@@ -131,7 +131,7 @@ async function getMachines(type: string | null): Promise<ProductMachineType[]> {
 /* fetching data using groq specific projects */
 async function getMachine(id: string): Promise<ProductMachineType> {
   return createClient({
-    projectId: "42h6u44a",
+    projectId: "ttl8khpq",
     apiVersion: "2023-07-19",
     dataset: "production",
   }).fetch(
@@ -156,7 +156,7 @@ async function getByName(name: string): Promise<ProductMachineType[]> {
   const lowercasedName = name.toLowerCase()
 
   return createClient({
-    projectId: "42h6u44a",
+    projectId: "ttl8khpq",
     apiVersion: "2023-07-19",
     dataset: "production",
   }).fetch(
