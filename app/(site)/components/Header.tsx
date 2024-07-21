@@ -4,7 +4,7 @@ import Image from "next/image"
 import DropDown from "./dropDown"
 import { LazyMotion, domAnimation, m } from "framer-motion"
 import Search from "./Search"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { navLinks, productsType } from "@/constants"
 import { usePathname } from "next/navigation"
@@ -13,6 +13,17 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(true)
   const pathName = usePathname();
 
+  const [yScroll , setYScroll] = useState(0);
+    useEffect(() => {
+        const handleScroll = () => {
+            setYScroll(window.scrollY);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+  
   const handleMouseEnter = (isEnabled:boolean) => {
     return () => {
       if (isEnabled) {
@@ -22,16 +33,11 @@ function Header() {
       }
     };
   };
+
   return (
     <LazyMotion features={domAnimation}>
-      <nav>
-        <div className="sticky top-0 py-4 px-4 z-50 w-full bg-secondary border-b border-light-gray text-basic-text">
-          <m.header
-            initial={{ y: -250 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 1, type: "spring", stiffness: 50 }}
-            className="container flex items-center justify-between mx-auto"
-          >
+        <header className={`sticky z-50 top-0 left-0 ${yScroll > 50 ? 'shadow-md py-3' : 'py-4'} px-4 w-full bg-secondary border-b border-gray-400 text-basic-text`}>
+          <div className="container flex items-center justify-between mx-auto">
             <nav className="hidden lg:inline-flex">
               <ul className="flex items-center gap-8">
                 {
@@ -84,9 +90,8 @@ function Header() {
             <div className="hidden lg:block">
               <Search />
             </div>
-          </m.header>
-        </div>
-      </nav>
+          </div>
+        </header>
     </LazyMotion>
   )
 }
