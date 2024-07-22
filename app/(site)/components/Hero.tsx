@@ -19,9 +19,12 @@ const containerVariants =  ({
 })
 
 function Hero() {
-  const handleClick = ()=> {
-
-  }
+  const handleClick = () => {
+    const element = document.getElementById('categories');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return <LazyMotion features={domAnimation}>
     <div className="bg-secondary px-4 py-16 h-auto">
@@ -41,7 +44,7 @@ function Hero() {
             products designed to stand the test of time.
           </p>
           <div className="w-fit mt-4">
-            <CustomButton title={"Explore Our Categories"} handleOnClick={handleClick} hasShadow={true} hasArrow={true} />
+            <CustomButton title={"Explore Our Products"} handleOnClick={handleClick} hasShadow={true} hasArrow={true} />
           </div>
         </motion.div>
 

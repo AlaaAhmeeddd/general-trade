@@ -22,27 +22,43 @@ export const navLinks = [
 ]
 export const productsType = [
     {
-        title: "Press brake",
-        href: "/machine?type=brake",
+        title: "Central Kitchen",
+        href: "/product?type=hot",
+        imageHref: '/kitchen.jpg'
     },
     {
-        title: "Shear Machines",
-        href: "/machine?type=shear",
+        title: "Hotel Equipment",
+        href: "/product?type=kitchen",
+        imageHref: '/kitchen2.jpg'
     },
     {
-        title: "Laser Machines",
-        href: "/machine?type=laser",
+        title: "Kitchen Utensils",
+        href: "/product?type=utensils",
+        imageHref: '/kitchen3.jpg'
     },
     {
-        title: "Rollers Machines",
-        href: "/machine?type=rolling",
+        title: "Medical",
+        href: "/product?type=others",
+        imageHref: '/kitchen4.jpg'
     },
     {
-        title: "Punching Machines",
-        href: "/machine?type=press",
+        title: "Boilers & Burners",
+        href: "/product?type=burner",
+        imageHref: '/kitchen5.jpg'
     },
     {
-        title: "Bender Machines",
-        href: "/machine?type=bind",
+        title: "Laundry",
+        href: "/product?type=laundry",
+        imageHref: '/kitchen6.jpg'
+    },
+    {
+        title: "Home Appliances",
+        href: "/product?type=castle",
+        imageHref: '/kitchen7.jpg'
+    },
+    {
+        title: "Others",
+        href: "/product?type=coffe",
+        imageHref: '/machine.jpg'
     },
 ]
