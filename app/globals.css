@@ -9,6 +9,7 @@ html {
   font-family: "Roboto Condensed", sans-serif;
 }
 
+/* Start Swiper */
 .swiper-button-next, .swiper-button-prev {
   color: white !important;
   background-color: #967F50 !important; 
@@ -20,13 +21,10 @@ html {
   align-items: center !important;
 }
 
-.swiper-button-next:hover, .swiper-button-prev:hover {
-  /* background-color: rgba(227, 19, 19, 0.7);  */
-}
-
 .swiper-button-next::after, .swiper-button-prev::after {
   font-size: 18px !important; 
 }
+/* End Swiper */
 
 /* Start feature section */
 .feature{
