@@ -26,21 +26,6 @@ function AllProducts() {
 
   return (
     <div className="prooo  " id="leftxx">
-      <Image
-        width={1080}
-        height={365}
-        src="https://drive.google.com/uc?export=view&id=1eHo4jATgYA3ArSab9QW_bFXCk6FLQ2cE"
-        alt="bg"
-        style={{
-          height: "50vh",
-          objectFit: "cover",
-          width: "100%",
-          position: "absolute",
-          zIndex: "-1",
-          top: "5%",
-          right: "0",
-        }}
-      />
       <LazyMotion features={domAnimation}>
         <section
           id="allProduct"

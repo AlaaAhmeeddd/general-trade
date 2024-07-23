@@ -15,21 +15,6 @@ function ProductMachinePage({ product }: props) {
   } else {
     return (
       <div className="container mx-auto py-20 px-[10px] flex justify-between flex-col gap-20 pt-[200px] ">
-        <Image
-          width={548}
-          height={369}
-          src="https://drive.google.com/uc?export=view&id=1iyxzKQmayyP6gcocVJAwhDbhCCOULEge"
-          alt="bg"
-          style={{
-            height: "50vh",
-            objectFit: "cover",
-            width: "100%",
-            position: "absolute",
-            zIndex: "-1",
-            top: "3%",
-            right: "0",
-          }}
-        />
         <div className="flex flex-col items-start justify-between gap-10 lg:flex-row">
           <div className="flex gap-6 flex-col pt-[10%]">
             <h1 className="text-4xl font-bold text-gray-200">{product.name}</h1>

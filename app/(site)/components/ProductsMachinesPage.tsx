@@ -12,8 +12,6 @@ type Props = {
 }
 
 function Products({ items, name }: Props) {
-  const [popupItme, setPopupItem] = useState("")
-  const [toggle, setToggle] = useState(false)
   // const [pname, setName] = useState("Machines")
 
   return (
@@ -72,26 +70,15 @@ function Products({ items, name }: Props) {
                     <div className=" text-gray-500"> {item.description}</div>
                   )}
                 </div>
-                {item.category === "machine" ? (
-                  <Link
-                    href={`/${
-                      item.category === "machine" ? "machine" : "product"
-                    }/${item._id}`}
-                    className="btn-more  "
-                  >
-                    See More
-                  </Link>
-                ) : (
-                  <button
-                    className="btn-more"
-                    onClick={() => {
-                      setPopupItem(item._id)
-                      setToggle(true)
-                    }}
-                  >
-                    See more
-                  </button>
-                )}
+
+                <Link
+                  href={`/${
+                    item.category === "machine" ? "machine" : "product"
+                  }/${item._id}`}
+                  className="btn-more  "
+                >
+                  See More
+                </Link>
               </div>
             </div>
           ))}
