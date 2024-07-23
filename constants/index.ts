@@ -22,13 +22,13 @@ export const navLinks = [
 ]
 export const productsType = [
   {
-    title: "Central Kitchen",
+    title: "Heating",
     href: "/product?type=hot",
     imageHref: "/kitchen.jpg",
   },
   {
-    title: "Hotel Equipment",
-    href: "/product?type=kitchen",
+    title: "Refrigation",
+    href: "/product?type=cold",
     imageHref: "/kitchen2.jpg",
   },
   {
@@ -50,15 +50,5 @@ export const productsType = [
     title: "Laundry",
     href: "/product?type=laundry",
     imageHref: "/kitchen6.jpg",
-  },
-  {
-    title: "Home Appliances",
-    href: "/product?type=castle",
-    imageHref: "/kitchen7.jpg",
-  },
-  {
-    title: "Others",
-    href: "/product?type=coffe",
-    imageHref: "/machine.jpg",
   },
 ]
