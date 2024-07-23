@@ -55,21 +55,6 @@ export default function SearchByType() {
 
   return (
     <div className=" flex flex-col gap-2 pt-[10px] ">
-      <Image
-        width={400}
-        height={200}
-        src="https://drive.google.com/uc?export=view&id=1eHo4jATgYA3ArSab9QW_bFXCk6FLQ2cE"
-        alt="bg"
-        style={{
-          height: "50vh",
-          objectFit: "cover",
-          width: "100%",
-          position: "absolute",
-          zIndex: "-5",
-          top: "-2%",
-          right: "0",
-        }}
-      />
       <div className="right-0">
         <DrawerPlacement />
       </div>
