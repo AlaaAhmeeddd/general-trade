@@ -1,17 +1,15 @@
 "use client";
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
 import { Keyboard, Navigation, Autoplay } from 'swiper/modules';
 import { productsType } from '@/constants';
-import Link from 'next/link';
 import { IoIosArrowRoundForward } from "react-icons/io";
+import Link from 'next/link';
 import Image from 'next/image';
-
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 export default function Categories() {
-
   return (
     <div className='px-4 pt-8 pb-16 h-auto w-full'>
       <div className="container mx-auto">

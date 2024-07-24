@@ -13,11 +13,10 @@ export default function CollectionTypes() {
                 <TypeCard 
                     href="/product?type=burner"
                     title="Boilers & Burners"
-                    description="Boilers & Burners generate heat and hot water."
+                    description="Generate heat and hot water."
                     imageHref="/boiler-nobackground.png"
                 />
             </div>
         </div>
-
     )
 }

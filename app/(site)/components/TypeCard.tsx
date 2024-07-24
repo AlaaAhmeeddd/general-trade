@@ -13,7 +13,7 @@ export default function TypeCard({href, title, description, imageHref}: cardType
     return (
         <div className="relative flex justify-between items-center bg-gray-100 rounded-lg p-8 overflow-hidden min-h-[250px]">
             <div className="flex flex-col gap-2 flex-1">
-                <h1 className="md:text-3xl text-xl text-basic-text capitalize font-semibold">{title}</h1>
+                <h1 className="text-3xl text-basic-text capitalize font-semibold">{title}</h1>
                 <p className="text-dark-gray">{description}</p>
                 <Link href={href}>
                     <button className="text-primary flex items-center duration-150 gap-2 mt-4 font-semibold hover:pl-2">

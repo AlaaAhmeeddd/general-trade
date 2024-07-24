@@ -27,7 +27,7 @@ function Hero() {
   };
 
   return <LazyMotion features={domAnimation}>
-    <div className="bg-secondary px-4 py-16 h-auto">
+    <div className="bg-secondary px-4 py-16 h-auto mb-8">
       <div className="flex xl:flex-row flex-col items-center justify-between gap-8 container mx-auto text-basic-text">
 
         <motion.div 

@@ -1,4 +1,5 @@
 import Categories from "./components/Categories"
+import ColdSection from "./components/ColdSection"
 import CollectionTypes from "./components/CollectionTypes"
 import FeatureHighlights from "./components/FeatureHighlights"
 import Hero from "./components/Hero"
@@ -10,6 +11,7 @@ export default function Home() {
       <FeatureHighlights />
       <Categories />
       <CollectionTypes />
+      <ColdSection />
     </main>
   )
 }

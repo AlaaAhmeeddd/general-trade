@@ -2,7 +2,7 @@ import { FiArrowDownRight } from "react-icons/fi";
 
 interface buttonProps {
     title: string,
-    handleOnClick: () => void,
+    handleOnClick?: () => void,
     hasShadow?: boolean,
     hasArrow?: boolean,
 }
