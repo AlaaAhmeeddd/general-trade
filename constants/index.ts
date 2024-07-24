@@ -6,7 +6,7 @@ export const navLinks = [
     },
     {
         title: 'products',
-        href: '/machines',
+        href: '/products',
         hasMenu: true
     },
     {
@@ -50,15 +50,5 @@ export const productsType = [
         title: "Laundry",
         href: "/product?type=laundry",
         imageHref: '/kitchen6.jpg'
-    },
-    {
-        title: "Home Appliances",
-        href: "/product?type=castle",
-        imageHref: '/kitchen7.jpg'
-    },
-    {
-        title: "Others",
-        href: "/product?type=coffe",
-        imageHref: '/machine.jpg'
     },
 ]
