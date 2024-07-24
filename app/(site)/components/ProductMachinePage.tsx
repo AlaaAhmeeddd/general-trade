@@ -4,7 +4,11 @@ import Link from "next/link"
 import Images from "./Images"
 import ProductMachineType from "@/types/Product"
 import { notFound } from "next/navigation"
-
+import { PiCertificateFill } from "react-icons/pi"
+import { AiFillSafetyCertificate } from "react-icons/ai"
+import { MdLocalShipping } from "react-icons/md"
+import { BsTransparency } from "react-icons/bs"
+import Similer from "./SimilerProudcts"
 type props = {
   product: ProductMachineType
 }
@@ -14,91 +18,189 @@ function ProductMachinePage({ product }: props) {
     return notFound()
   } else {
     return (
-      <div className="container mx-auto py-20 px-[10px] flex justify-between flex-col gap-20 pt-[200px] ">
-        <Image
-          width={548}
-          height={369}
-          src="https://drive.google.com/uc?export=view&id=1iyxzKQmayyP6gcocVJAwhDbhCCOULEge"
-          alt="bg"
-          style={{
-            height: "50vh",
-            objectFit: "cover",
-            width: "100%",
-            position: "absolute",
-            zIndex: "-1",
-            top: "3%",
-            right: "0",
-          }}
-        />
-        <div className="flex flex-col items-start justify-between gap-10 lg:flex-row">
-          <div className="flex gap-6 flex-col pt-[10%]">
-            <h1 className="text-4xl font-bold text-gray-200">{product.name}</h1>
-            <p className="text-lg  text-gray-600">{product.description}</p>
+      <div>
+        <div className="flex flex-col md:flex-row items-center justify-between p-8 bg-white shadow-md rounded-lg">
+          <div className="flex flex-col md:w-1/2 space-y-4">
+            <div className="relative w-full h-96">
+              <Image
+                src={product.mainImage}
+                alt="Vintage Cuff Ring"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-md"
+              />
+            </div>
+            <div className="grid grid-cols-3 gap-2">
+              <div className="relative w-full h-32">
+                <Image
+                  src="/kitchen2.jpg"
+                  alt="Ring View 1"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-md"
+                />
+              </div>
+              <div className="relative w-full h-32">
+                <Image
+                  src="/kitchen3.jpg"
+                  alt="Ring View 2"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-md"
+                />
+              </div>
+              <div className="relative w-full h-32">
+                <Image
+                  src="/kitchen4.jpg"
+                  alt="Ring View 3"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-md"
+                />
+              </div>
+            </div>
           </div>
-          <Image
-            src={product.mainImage}
-            alt="image"
-            width={500}
-            height={500}
-            className="bg-white shadow-2xl rounded-2xl "
-          />
-        </div>
-        {product.url && (
-          <div className="flex flex-col gap-4">
-            <Link
-              href={product.url || "/"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-red-700 text-white px-3 py-2 text-center rounded-[30px] flex-1 text-lg font-semibold"
-            >
-              youtube video
-            </Link>
-            <hr />
-          </div>
-        )}
-        <div className="flex justify-between items-start gap-10 flex-col lg:flex-row max-w-[120%]">
-          <div className="max-w-full sm:max-w-[50%]">
-            <div className="flex flex-col gap-4 ">
+          <div className="flex flex-col md:w-1/2 space-y-4 mt-4 md:mt-0 md:ml-8">
+            <h2 className="text-2xl font-bold"> {product.name}</h2>
+            <div className="text-gray-700">
               {product.content && (
                 <>
-                  <h1 className="text-3xl font-bold uppercase md:text-5xl ">
+                  <h1 className="text-md font-bold uppercase md:text-xl text-black ">
                     Specifications
                   </h1>
                   <hr />
-                  <div className="flex flex-col gap-6 py-4 text-lg">
+                  <div className="flex flex-col gap-6 py-4 text-lg text-black">
                     <PortableText value={product.content} />
                   </div>
                 </>
               )}
             </div>
-            <div className="flex flex-col gap-4">
-              {product.features && (
-                <>
-                  <h1 className="text-3xl font-bold uppercase md:text-5xl ">
-                    features
-                  </h1>
-                  <hr />
-                  <div className="flex flex-col gap-6 py-4 text-lg ">
-                    <PortableText value={product.features} />
-                  </div>
-                </>
-              )}
+            <div>
+              <span className="font-medium text-black">Product Number:</span>{" "}
+              5672-9013-4826
             </div>
-          </div>
-          <div className="w-full xvw">
-            {product.table && (
-              <Image
-                src={product.table}
-                alt="image"
-                className="object-cover w-full h-full rounded-lg"
-                width={1500}
-                height={800}
-              />
-            )}
-            <Images product={product} />
+            <div>
+              <span className="font-medium text-black">Category:</span>{" "}
+              {product.category}
+            </div>
+            {/* <div>
+            <span className="font-medium">Tags:</span> Bracelet, Accessories
+          </div> */}
+            <button className="mt-4 bg-black hover:bg-gold-700 text-white font-bold py-2 px-2 rounded ">
+              Email Us
+            </button>
           </div>
         </div>
+        <div className="px-4 py-16 h-auto w-full">
+          <div className="container mx-auto">
+            <div className="grid lg:grid-cols-4 grid-cols-2 w-full py-8 xl:bg-gray-100 rounded-lg xl:gap-0 gap-4">
+              <div className="feature xl:border-r xl:border-r-primary/40 px-4 xl:py-0 py-8 rounded-lg xl:rounded-none">
+                <PiCertificateFill className="featIcon text-primary border-primary/40" />
+                <h3 className="featTitle text-basic-text">Certified</h3>
+                <p className="text-dark-gray featSebTitle">
+                  Available certificates of authenticity
+                </p>
+              </div>
+              <div className="feature xl:border-r xl:border-r-primary/40 px-4 xl:py-0 py-8 rounded-lg xl:rounded-none">
+                <AiFillSafetyCertificate className="featIcon text-primary border-primary/40" />
+                <h3 className="featTitle text-basic-text">Secure</h3>
+                <p className="text-dark-gray featSebTitle">
+                  Certified marketplace since 2024
+                </p>
+              </div>
+              <div className="feature xl:border-r xl:border-r-primary/40 px-4 xl:py-0 py-8 rounded-lg xl:rounded-none">
+                <MdLocalShipping className="featIcon text-primary border-primary/40" />
+                <h3 className="featTitle text-basic-text">Shipping</h3>
+                <p className="text-dark-gray featSebTitle">
+                  Free, fast, and reliable shipping
+                </p>
+              </div>
+              <div className="feature px-4 xl:py-0 py-8 rounded-lg">
+                <BsTransparency className="featIcon text-primary border-primary/40" />
+                <h3 className="featTitle text-basic-text">Transparent</h3>
+                <p className="text-dark-gray featSebTitle">
+                  Hassle-free return policy
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* <Similer items={product.type[]}  /> */}
       </div>
+      // <div className="bg-secondary ">
+      //   <div className="container mx-auto py-20 px-[10px] flex justify-between flex-col gap-20 pt-[200px] ">
+      //     <div className="flex flex-col items-start justify-between gap-10 lg:flex-row">
+      //       <div className="flex gap-6 flex-col pt-[10%]">
+      //         <h1 className="text-4xl font-bold text-gray-200">
+      //           {product.name}
+      //         </h1>
+      //         <p className="text-lg  text-gray-600">{product.description}</p>
+      //       </div>
+      //       <Image
+      //         src={product.mainImage}
+      //         alt="image"
+      //         width={500}
+      //         height={500}
+      //         className="bg-white shadow-2xl rounded-2xl "
+      //       />
+      //     </div>
+      //     {product.url && (
+      //       <div className="flex flex-col gap-4">
+      //         <Link
+      //           href={product.url || "/"}
+      //           target="_blank"
+      //           rel="noopener noreferrer"
+      //           className="bg-red-700 text-white px-3 py-2 text-center rounded-[30px] flex-1 text-lg font-semibold"
+      //         >
+      //           youtube video
+      //         </Link>
+      //         <hr />
+      //       </div>
+      //     )}
+      //     <div className="flex justify-between items-start gap-10 flex-col lg:flex-row max-w-[120%]">
+      //       <div className="max-w-full sm:max-w-[50%]">
+      //         <div className="flex flex-col gap-4 ">
+      //           {product.content && (
+      //             <>
+      //               <h1 className="text-3xl font-bold uppercase md:text-5xl ">
+      //                 Specifications
+      //               </h1>
+      //               <hr />
+      //               <div className="flex flex-col gap-6 py-4 text-lg">
+      //                 <PortableText value={product.content} />
+      //               </div>
+      //             </>
+      //           )}
+      //         </div>
+      //         <div className="flex flex-col gap-4">
+      //           {product.features && (
+      //             <>
+      //               <h1 className="text-3xl font-bold uppercase md:text-5xl ">
+      //                 features
+      //               </h1>
+      //               <hr />
+      //               <div className="flex flex-col gap-6 py-4 text-lg ">
+      //                 <PortableText value={product.features} />
+      //               </div>
+      //             </>
+      //           )}
+      //         </div>
+      //       </div>
+      //       <div className="w-full xvw">
+      //         {product.table && (
+      //           <Image
+      //             src={product.table}
+      //             alt="image"
+      //             className="object-cover w-full h-full rounded-lg"
+      //             width={1500}
+      //             height={800}
+      //           />
+      //         )}
+      //         <Images product={product} />
+      //       </div>
+      //     </div>
+      //   </div>
+      // </div>
     )
   }
 }

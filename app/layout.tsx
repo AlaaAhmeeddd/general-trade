@@ -3,11 +3,11 @@ import { Inter } from "next/font/google"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Shadel",
+  title: "General-trade",
   description:
     "Top-quality sheet and press metal solutions for stylish designs.",
   icons: {
-    icon: "/we.png",
+    icon: "/logo.png",
   },
 }
 
