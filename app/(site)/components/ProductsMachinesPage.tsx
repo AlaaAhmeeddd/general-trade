@@ -37,7 +37,7 @@ function Products({ items, name }: Props) {
         </div>
       )}
       <div className="flex flex-row">
-        <div className="fixed left-0 top-24 w-64">
+        <div className="left-0 absolute top-24 w-64">
           <ul className="space-y-1">
             <li>
               <a

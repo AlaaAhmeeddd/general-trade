@@ -3,16 +3,20 @@ import Link from "next/link"
 import { useState } from "react"
 import Search from "./Search"
 import { navLinks } from "@/constants"
-import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
+import { IoMenuOutline, IoCloseOutline } from "react-icons/io5"
 
 function DropDown() {
   const [state, setState] = useState(false)
   const handleClick = () => {
     setState(!state)
   }
+
   return (
     <div className="lg:hidden shrink-0">
-      <div className="border border-gray-400 p-1 rounded-full" onClick={handleClick}>
+      <div
+        className="border border-gray-400 p-1 rounded-full"
+        onClick={handleClick}
+      >
         <IoMenuOutline className="w-[25px] h-[25px] text-text-primary" />
       </div>
       <nav
@@ -24,10 +28,14 @@ function DropDown() {
           <IoCloseOutline className="text-white w-[25px] h-[25px]" />
         </div>
         <div className="mt-4">
-          <Search setState={setState} textStyle="border-gray-400 border text-primary" />
+          <Search
+            setState={setState}
+            textStyle="border-gray-400 border text-primary"
+          />
           <ul className="flex items-center flex-col justify-center gap-4 mt-6">
-            {navLinks.map((link, index)=>(
-                <li key={index}
+            {navLinks.map((link, index) => (
+              <li
+                key={index}
                 onClick={handleClick}
                 className="font-semibold capitalize text-xl text-white"
               >

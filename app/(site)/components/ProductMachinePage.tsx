@@ -8,6 +8,7 @@ import { PiCertificateFill } from "react-icons/pi"
 import { AiFillSafetyCertificate } from "react-icons/ai"
 import { MdLocalShipping } from "react-icons/md"
 import { BsTransparency } from "react-icons/bs"
+import Similer from "./SimilerProudcts"
 type props = {
   product: ProductMachineType
 }
@@ -124,6 +125,7 @@ function ProductMachinePage({ product }: props) {
             </div>
           </div>
         </div>
+        {/* <Similer items={product.type[]}  /> */}
       </div>
       // <div className="bg-secondary ">
       //   <div className="container mx-auto py-20 px-[10px] flex justify-between flex-col gap-20 pt-[200px] ">
