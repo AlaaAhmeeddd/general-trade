@@ -3,6 +3,7 @@ import ColdSection from "./components/ColdSection"
 import CollectionTypes from "./components/CollectionTypes"
 import FeatureHighlights from "./components/FeatureHighlights"
 import Hero from "./components/Hero"
+import HotSection from "./components/HotSection"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Categories />
       <CollectionTypes />
       <ColdSection />
+      <HotSection />
     </main>
   )
 }
