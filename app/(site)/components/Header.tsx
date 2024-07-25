@@ -50,7 +50,7 @@ function Header() {
                         <RiArrowDropDownLine className="w-[30px] h-[30px] absolute top-[50%] -translate-y-[50%] -right-6" />
                       )}
                       {menuOpen && link.hasMenu && (
-                        <div className="absolute left-0 hidden mb-2 transition-opacity duration-300 bg-white rounded-lg shadow-lg w-60 top-full group-hover:block -z-10 group-hover:z-20">
+                        <div className="absolute left-0 hidden mb-2 transition-opacity duration-300 bg-white rounded-lg shadow-lg w-60 top-full group-hover:block -z-10 group-hover:z-[100]">
                           <ul className="">
                             {productsType.map((type, index) => (
                               <li key={index} className="text-sm duration-300 hover:bg-gray-100 hover:pl-2">

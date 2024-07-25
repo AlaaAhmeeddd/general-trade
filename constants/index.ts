@@ -6,7 +6,7 @@ export const navLinks = [
   },
   {
     title: "products",
-    href: "/machines",
+    href: "/product",
     hasMenu: true,
   },
   {
