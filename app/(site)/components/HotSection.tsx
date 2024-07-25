@@ -5,7 +5,7 @@ import CustomButton from "./CustomButton";
 export default function HotSection() {
     return (
         <div className="bg-secondary">
-            <div className="px-4 py-16 h-auto">
+            <div className="px-4 py-20 h-auto">
                 <div className="flex xl:flex-row flex-col items-center justify-center gap-8 container mx-auto">
                     <div className="relative h-auto xl:mb-0 mb-12">
                         <div className='rounded-xl overflow-hidden'>
