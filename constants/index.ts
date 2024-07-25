@@ -36,14 +36,20 @@ export const productsType = [
     href: "/product?type=utensils",
     imageHref: "/kitchen3.jpg",
   },
-  {
-    title: "Medical",
-    href: "/product?type=others",
-    imageHref: "/kitchen4.jpg",
-  },
+
   {
     title: "Boilers & Burners",
     href: "/product?type=burner",
-    imageHref: "/kitchen5.jpg",
+    imageHref: "/boilers.jpg",
+  },
+  {
+    title: "Fire Extinguisher",
+    href: "/product?type=boiler",
+    imageHref: "/fire extinguisher2.jpg",
+  },
+  {
+    title: "Medical",
+    href: "/product?type=others",
+    imageHref: "/medical.jpg",
   },
 ]
