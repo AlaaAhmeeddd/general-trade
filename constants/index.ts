@@ -46,9 +46,4 @@ export const productsType = [
     href: "/product?type=burner",
     imageHref: "/kitchen5.jpg",
   },
-  {
-    title: "Laundry",
-    href: "/product?type=laundry",
-    imageHref: "/kitchen6.jpg",
-  },
 ]
