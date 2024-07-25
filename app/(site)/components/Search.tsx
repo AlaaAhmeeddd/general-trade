@@ -9,8 +9,8 @@ import {
   useState,
 } from "react"
 type props = {
-  setState?: Dispatch<SetStateAction<boolean>>,
-  textStyle?: string,
+  setState?: Dispatch<SetStateAction<boolean>>
+  textStyle?: string
 }
 function Search({ setState, textStyle }: props) {
   const router = useRouter()
@@ -28,7 +28,11 @@ function Search({ setState, textStyle }: props) {
   }
   return (
     <form onSubmit={submitHandler}>
-      <div className={`flex px-4 rounded-full ${textStyle ? textStyle : 'border-gray-400'} border`}>
+      <div
+        className={`flex px-4 rounded-full ${
+          textStyle ? textStyle : "border-gray-400"
+        } border`}
+      >
         <input
           type="text"
           placeholder="Search..."
@@ -46,6 +50,7 @@ function Search({ setState, textStyle }: props) {
               width="25"
               height="25"
               viewBox="0,0,256,256"
+              color="black"
             >
               <g
                 fill="#919191"

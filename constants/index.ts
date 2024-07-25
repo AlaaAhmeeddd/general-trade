@@ -6,7 +6,7 @@ export const navLinks = [
   },
   {
     title: "products",
-    href: "/machines",
+    href: "/product?type=hot",
     hasMenu: true,
   },
   {
@@ -16,7 +16,7 @@ export const navLinks = [
   },
   {
     title: "contact",
-    href: "/contact",
+    href: "#footer",
     hasMenu: false,
   },
 ]
@@ -45,10 +45,5 @@ export const productsType = [
     title: "Boilers & Burners",
     href: "/product?type=burner",
     imageHref: "/kitchen5.jpg",
-  },
-  {
-    title: "Laundry",
-    href: "/product?type=laundry",
-    imageHref: "/kitchen6.jpg",
   },
 ]
