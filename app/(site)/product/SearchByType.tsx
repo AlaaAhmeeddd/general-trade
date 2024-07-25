@@ -54,7 +54,7 @@ export default function SearchByType() {
   const { products, isLoading } = useProducts(typeQuery)
 
   return (
-    <div className=" flex flex-col gap-2 pt-[10px] ">
+    <div className=" flex flex-col">
       <div className="right-0">
         <DrawerPlacement />
       </div>

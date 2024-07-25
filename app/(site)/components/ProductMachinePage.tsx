@@ -11,20 +11,27 @@ import { MdLocalShipping } from "react-icons/md"
 import { BsTransparency } from "react-icons/bs"
 import Similer from "./SimilerProudcts"
 import useProducts from "@/hooks/use-products"
+<<<<<<< HEAD
+=======
+import FeatureHighlights from "./FeatureHighlights"
+>>>>>>> 321b4638710b18a84fb7867b419e8235c5de006b
 type props = {
   product: ProductMachineType
 }
 
 function ProductMachinePage({ product }: props) {
   const { products, isLoading } = useProducts(product.type)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 321b4638710b18a84fb7867b419e8235c5de006b
   if (product == null) {
     return notFound()
   } else {
     return (
       <div>
         <div className="flex flex-col md:flex-row items-center justify-between p-8 bg-white shadow-md rounded-lg">
-          <div className="flex flex-col md:w-1/2 space-y-4">
+          <div className="flex flex-col md:w-1/2 w-full space-y-4">
             <div className="relative w-full h-96">
               <Image
                 src={product.mainImage}
@@ -95,6 +102,7 @@ function ProductMachinePage({ product }: props) {
             </button>
           </div>
         </div>
+<<<<<<< HEAD
         <div className="px-4 py-16 h-auto w-full">
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-4 grid-cols-2 w-full py-8 xl:bg-gray-100 rounded-lg xl:gap-0 gap-4">
@@ -130,6 +138,10 @@ function ProductMachinePage({ product }: props) {
           </div>
         </div>
         <Similer items={[product]} />
+=======
+        <FeatureHighlights />
+        <Similer items={products}  />
+>>>>>>> 321b4638710b18a84fb7867b419e8235c5de006b
       </div>
       // <div className="bg-secondary ">
       //   <div className="container mx-auto py-20 px-[10px] flex justify-between flex-col gap-20 pt-[200px] ">

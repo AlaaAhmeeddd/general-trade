@@ -11,6 +11,7 @@ type Props = {
 }
 
 function Similer({ items }: Props) {
+  console.log(items)
   return (
     <div className="pb-10 flex justify-start items-center flex-col min-h-[70vh]">
       <h1

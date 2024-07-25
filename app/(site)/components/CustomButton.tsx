@@ -2,7 +2,7 @@ import { FiArrowDownRight } from "react-icons/fi";
 
 interface buttonProps {
     title: string,
-    handleOnClick: () => void,
+    handleOnClick?: () => void,
     hasShadow?: boolean,
     hasArrow?: boolean,
 }
@@ -11,7 +11,7 @@ export default function CustomButton({title, handleOnClick, hasShadow, hasArrow}
         <div className="relative z-10">
             <button 
                 onClick={handleOnClick}
-                className="text-white font-semibold py-3 px-4 border-2 border-secondary bg-primary rounded-[4px] text-sm"
+                className="text-white font-semibold py-3 px-6 border-2 border-secondary bg-primary rounded-[4px] text-sm"
             >
                 <p className="flex gap-2 items-center">
                     {title}
