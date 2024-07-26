@@ -491,7 +491,6 @@ body {
 }
 .leftside ul li a {
   display: block;
-  color: white;
   width: 100%;
   height: 70px;
   display: flex;
@@ -499,21 +498,10 @@ body {
   justify-content: center;
   flex-direction: column;
   transition: 0.4s;
-  font-size: 200px;
+  font-size: 20px;
   border-bottom: 2px solid rgb(153, 153, 153);
 }
 
-.leftside ul li a {
-  padding-top: 5px;
-  font-size: 11px;
-  letter-spacing: 0.4px;
-  text-transform: capitalize;
-}
-.leftside ul li a:hover {
-  background-color: rgb(254, 0, 0);
-  color: white;
-  font-weight: 500;
-}
 .leftside .white {
   color: white;
   font-weight: bolder;

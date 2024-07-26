@@ -36,16 +36,6 @@ function DropDown() {
             {navLinks.map((link, index) => (
               <>
                 {
-                  link.title === "products" ?
-                  productsType.map((type, index)=>(
-                    <li
-                      key={index}
-                      onClick={handleClick}
-                      className="font-semibold capitalize text-xl text-basic-text"
-                    >
-                      <Link href={type.href}>{type.title}</Link>
-                    </li>
-                  )) : 
                   <li
                     key={index}
                     onClick={handleClick}
