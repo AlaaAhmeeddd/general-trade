@@ -3,10 +3,8 @@
 import { useRouter, useSearchParams } from "next/navigation"
 import Products from "../components/ProductsMachinesPage"
 import useProducts, { TQuery } from "@/hooks/use-products"
-import Link from "next/link"
 import { Suspense } from "react"
 import { DrawerPlacement } from "./drawer"
-import Image from "next/image"
 
 export const dynamic = "force-dynamic"
 // ; | "" | ""
@@ -50,7 +48,6 @@ const Loading = () => {
 export default function SearchByType() {
   const params = useSearchParams()
   const typeQuery = params.get("type") as TQuery
-  const router = useRouter()
   const { products, isLoading } = useProducts(typeQuery)
 
   return (

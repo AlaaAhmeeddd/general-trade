@@ -14,7 +14,7 @@ type Props = {
 }
 
 function Similer({ items }: Props) {
-  console.log(items)
+  
   return (
     <div className='px-4 pt-8 pb-16 h-auto w-full'>
       <div className="container mx-auto">

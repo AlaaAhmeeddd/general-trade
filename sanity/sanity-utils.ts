@@ -68,6 +68,7 @@ async function getProduct(id: string): Promise<ProductMachineType> {
     { id }
   )
 }
+
 async function getMachines(type: string | null): Promise<ProductMachineType[]> {
   const client = createClient({
     projectId: "ttl8khpq",

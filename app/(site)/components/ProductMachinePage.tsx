@@ -1,14 +1,8 @@
 "use client"
 import Image from "next/image"
 import { PortableText } from "@portabletext/react"
-import Link from "next/link"
-import Images from "./Images"
 import ProductMachineType from "@/types/Product"
 import { notFound } from "next/navigation"
-import { PiCertificateFill } from "react-icons/pi"
-import { AiFillSafetyCertificate } from "react-icons/ai"
-import { MdLocalShipping } from "react-icons/md"
-import { BsTransparency } from "react-icons/bs"
 import Similer from "./SimilerProudcts"
 import useProducts from "@/hooks/use-products"
 import FeatureHighlights from "./FeatureHighlights"
@@ -18,6 +12,7 @@ type props = {
 
 function ProductMachinePage({ product }: props) {
   const { products, isLoading } = useProducts(product.type)
+  console.log(product.type)
   if (product == null) {
     return notFound()
   } else {
