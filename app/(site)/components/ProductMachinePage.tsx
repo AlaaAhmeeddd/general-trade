@@ -11,20 +11,13 @@ import { MdLocalShipping } from "react-icons/md"
 import { BsTransparency } from "react-icons/bs"
 import Similer from "./SimilerProudcts"
 import useProducts from "@/hooks/use-products"
-<<<<<<< HEAD
-=======
 import FeatureHighlights from "./FeatureHighlights"
->>>>>>> 321b4638710b18a84fb7867b419e8235c5de006b
 type props = {
   product: ProductMachineType
 }
 
 function ProductMachinePage({ product }: props) {
   const { products, isLoading } = useProducts(product.type)
-<<<<<<< HEAD
-
-=======
->>>>>>> 321b4638710b18a84fb7867b419e8235c5de006b
   if (product == null) {
     return notFound()
   } else {
@@ -102,46 +95,8 @@ function ProductMachinePage({ product }: props) {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="px-4 py-16 h-auto w-full">
-          <div className="container mx-auto">
-            <div className="grid lg:grid-cols-4 grid-cols-2 w-full py-8 xl:bg-gray-100 rounded-lg xl:gap-0 gap-4">
-              <div className="feature xl:border-r xl:border-r-primary/40 px-4 xl:py-0 py-8 rounded-lg xl:rounded-none">
-                <PiCertificateFill className="featIcon text-primary border-primary/40" />
-                <h3 className="featTitle text-basic-text">Certified</h3>
-                <p className="text-dark-gray featSebTitle">
-                  Available certificates of authenticity
-                </p>
-              </div>
-              <div className="feature xl:border-r xl:border-r-primary/40 px-4 xl:py-0 py-8 rounded-lg xl:rounded-none">
-                <AiFillSafetyCertificate className="featIcon text-primary border-primary/40" />
-                <h3 className="featTitle text-basic-text">Secure</h3>
-                <p className="text-dark-gray featSebTitle">
-                  Certified marketplace since 2024
-                </p>
-              </div>
-              <div className="feature xl:border-r xl:border-r-primary/40 px-4 xl:py-0 py-8 rounded-lg xl:rounded-none">
-                <MdLocalShipping className="featIcon text-primary border-primary/40" />
-                <h3 className="featTitle text-basic-text">Shipping</h3>
-                <p className="text-dark-gray featSebTitle">
-                  Free, fast, and reliable shipping
-                </p>
-              </div>
-              <div className="feature px-4 xl:py-0 py-8 rounded-lg">
-                <BsTransparency className="featIcon text-primary border-primary/40" />
-                <h3 className="featTitle text-basic-text">Transparent</h3>
-                <p className="text-dark-gray featSebTitle">
-                  Hassle-free return policy
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <Similer items={[product]} />
-=======
         <FeatureHighlights />
         <Similer items={products}  />
->>>>>>> 321b4638710b18a84fb7867b419e8235c5de006b
       </div>
       // <div className="bg-secondary ">
       //   <div className="container mx-auto py-20 px-[10px] flex justify-between flex-col gap-20 pt-[200px] ">

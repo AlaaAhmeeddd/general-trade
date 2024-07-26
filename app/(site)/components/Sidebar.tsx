@@ -1,32 +1,11 @@
-"use client"
 import Image from 'next/image'
-import React, { useState, useEffect} from 'react'
-import { IoIosArrowDroprightCircle } from "react-icons/io";
-
 
 export default function Sidebar() {
-    const [ isOpen , setOpen] = useState(false);
-
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth < 960) {
-                setOpen(false);
-            } else {
-                setOpen(true);
-            }
-        };
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
 
     return (
-        <div className='relative bg-white border-r shadow-lg'>
-            <IoIosArrowDroprightCircle 
-                className={`lg:hidden absolute top-20 right-0 text-2xl text-primary z-50 ${isOpen ? "block" : "lg:hidden block"}`}
-                onClick={()=>setOpen(!isOpen)}
-            />
-            <div className={`${isOpen ? "w-64 lg:sticky absolute" : "w-12"} left-0 h-full lg:w-64 w-12  py-4 px-4 overflow-hidden z-20`}>
-                <ul className={`space-y-4 ${!isOpen && "lg:block hidden"}`}>
+        <div className='relative'>
+            <div className="left-0 h-full w-64 bg-white py-4 px-4 overflow-hidden">
+                <ul className="space-y-4">
                     <li>
                         <a
                             href="#"

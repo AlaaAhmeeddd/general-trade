@@ -5,7 +5,6 @@ import Products from "../components/ProductsMachinesPage"
 import useProducts, { TQuery } from "@/hooks/use-products"
 import Link from "next/link"
 import { Suspense } from "react"
-import { DrawerPlacement } from "./drawer"
 import Image from "next/image"
 
 export const dynamic = "force-dynamic"
@@ -55,9 +54,6 @@ export default function SearchByType() {
 
   return (
     <div className=" flex flex-col">
-      <div className="right-0">
-        <DrawerPlacement />
-      </div>
       {isLoading ? (
         <Loading />
       ) : (

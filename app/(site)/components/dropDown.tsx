@@ -17,7 +17,7 @@ function DropDown() {
         className="border border-gray-400 p-1 rounded-full"
         onClick={handleClick}
       >
-        <IoMenuOutline className="w-[25px] h-[25px] text-text-primary" />
+        <IoMenuOutline className="w-[25px] h-[25px] text-basic-text" />
       </div>
       <nav
         className={`${
@@ -25,7 +25,7 @@ function DropDown() {
         } inline-flex lg:hidden flex-col items-center justify-between absolute top-0 left-0 gap-10 bg-secondary p-10 w-full z-[5] pt-[60px] border border-black rounded-lg `}
       >
         <div onClick={handleClick} className="absolute top-6 right-10 ">
-          <IoCloseOutline className="text-white w-[25px] h-[25px]" />
+          <IoCloseOutline className="text-basic-text w-[25px] h-[25px]" />
         </div>
         <div className="mt-4">
           <Search

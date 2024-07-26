@@ -132,9 +132,9 @@ html {
 }
 
 .btn-more {
-  padding: 10px;
+  padding: 8px;
   text-align: center;
-  background-color: #000000;
+  background-color: #967F50;
   color: #fff;
   text-decoration: none;
   border-radius: 25px;
@@ -142,7 +142,7 @@ html {
 }
 
 .btn-more:hover {
-  background-color: #666;
+  background-color: #715f3a;
 }
 
 .slider {

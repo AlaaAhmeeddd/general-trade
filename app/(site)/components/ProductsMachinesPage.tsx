@@ -16,10 +16,12 @@ type Props = {
 function Products({ items, name }: Props) {
   return (
     <div className="flex min-h-[70vh]">
-      <Sidebar />
-      <div className="pb-20 flex flex-col items-center lg:mx-0 mx-auto">
+      <div className="lg:block hidden min-h-[70vh] border-r shadow-lg z-10">
+        <Sidebar />
+      </div>
+      <div className="pb-20 flex flex-col items-center flex-1">
         <h1
-          className={`text-[20px] mt-8 md:text-[40px] lg:text-[60px] font-bold text-center text-basic-text  `}
+          className={`text-[30px] mt-8 md:text-[40px] lg:text-[60px] font-bold text-center text-basic-text  `}
         >
           {name}
         </h1>
@@ -28,7 +30,7 @@ function Products({ items, name }: Props) {
             <>
               {items.length == 0
                 ? "No Items founded"
-                : `Items( ${items.length} ) found`}
+                : `${items.length} Items found`}
             </>
           </div>
         ) : (
@@ -104,13 +106,13 @@ function Products({ items, name }: Props) {
             </ul>
           </div> */}
 
-          <div className=" container mx-auto flex flex-col md:flex-row justify-center items-stretch gap-8 px-4  flex-wrap">
+          <div className="flex justify-center items-stretch gap-8 px-4 flex-wrap mt-8">
             {items?.map((item) => (
               <div
                 key={item._id}
-                className="bg-white rounded-3xl overflow-hidden flex flex-col gap-10 justify-between lg:w-[46%] xl:w-[30%] shadow-2xl "
+                className="bg-white border border-gray-100 p-3 rounded-md overflow-hidden flex flex-col justify-between md:w-[30%] w-full shadow-md "
               >
-                <div className="flex justify-center items-center max-h-[350px] overflow-hidden mx-auto pt-20">
+                <div className="relative flex justify-center items-center max-h-[350px] overflow-hidden mx-auto">
                   {item.mainImage ? (
                     <Image
                       src={item.mainImage}
@@ -124,11 +126,11 @@ function Products({ items, name }: Props) {
                   )}
                 </div>
 
-                <div className="flex flex-col gap-6 px-5 pb-10 justify-between bg-secondary">
+                <div className="flex flex-col gap-5 px-5 py-6 justify-between bg-gray-100 rounded-md mt-6">
                   <div>
                     <div
                       title={item.name}
-                      className="font-bold text-lg md:text-2xl w-72 truncate "
+                      className="font-semibold md:text-xl truncate "
                     >
                       {item.name}
                     </div>
