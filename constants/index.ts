@@ -60,19 +60,19 @@ export const products = [
     mainImage: "/kitchen2.jpg",
     items: [
       {
-        productImage: "/gas.jpg",
-        title: "hot",
+        productImage: "/Fire-Extinguisher-nobackground.png",
+        title: "Boiler",
       },
       {
-        productImage: "/gas2.jpg",
-        title: "Heating",
+        productImage: "/Fire-Extinguisher-nobackground.png",
+        title: "Boiler",
       },
       {
-        productImage: "/boilers2.jpg",
-        title: "Boilers",
+        productImage: "/Fire-Extinguisher-nobackground.png",
+        title: "Boiler",
       },
       {
-        productImage: "/boiler-nobackground.png",
+        productImage: "/Fire-Extinguisher-nobackground.png",
         title: "Boiler",
       },
     ],

@@ -12,13 +12,12 @@ type Props = {
   name: string
 }
 
-
 function Products({ items, name }: Props) {
   return (
     <div className="flex min-h-[70vh]">
-      <div className="lg:block hidden min-h-[70vh] border-r shadow-lg z-10">
+      {/* <div className="lg:block hidden min-h-[70vh] border-r shadow-lg z-10">
         <Sidebar />
-      </div>
+      </div> */}
       <div className="pb-20 md:pt-0 pt-16 flex flex-col items-center flex-1">
         <h1
           className={`text-[30px] mt-8 md:text-[40px] lg:text-[60px] font-bold text-center text-basic-text  `}
