@@ -12,8 +12,10 @@ function Footer() {
           </div>
 
           <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-            consequuntur amet culpa cum itaque neque.
+            At General Trade, we stand out for our commitment to exceptional
+            quality and innovative solutions in sheet metal products. Our focus
+            on reliability and customer satisfaction makes us a trusted partner
+            in the industry.
           </p>
 
           <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">

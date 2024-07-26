@@ -25,13 +25,15 @@ function ProductMachinePage({ product }: props) {
       <div>
         <div className="flex flex-col md:flex-row items-center justify-between p-8 bg-white shadow-md rounded-lg">
           <div className="flex flex-col md:w-1/2 w-full space-y-4">
-            <div className="relative w-full h-96">
+            <div className="relative w-full h-auto sm:ml-[30%] ml-0 ">
               <Image
                 src={product.mainImage}
                 alt="Vintage Cuff Ring"
-                layout="fill"
+                // layout="fill"
                 objectFit="cover"
                 className="rounded-md"
+                height={200}
+                width={250}
               />
             </div>
             <div className="grid grid-cols-3 gap-2">
@@ -96,7 +98,7 @@ function ProductMachinePage({ product }: props) {
           </div>
         </div>
         <FeatureHighlights />
-        <Similer items={products}  />
+        <Similer items={products} />
       </div>
       // <div className="bg-secondary ">
       //   <div className="container mx-auto py-20 px-[10px] flex justify-between flex-col gap-20 pt-[200px] ">
