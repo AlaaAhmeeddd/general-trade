@@ -20,14 +20,13 @@ export default function Sidebar() {
     }, []);
 
     return (
-        <div className='relative'>
+        <div className='relative bg-white border-r shadow-lg'>
             <IoIosArrowDroprightCircle 
-                className="lg:hidden absolute top-20 -right-3 text-2xl text-primary z-50"
+                className={`lg:hidden absolute top-20 right-0 text-2xl text-primary z-50 ${isOpen ? "block" : "lg:hidden block"}`}
                 onClick={()=>setOpen(!isOpen)}
             />
-            <div className={`${isOpen ? "w-64 lg:relative absolute" : "w-12"} left-0 sticky lg:w-64 w-12 bg-white py-4 px-4 border-r shadow-lg max-h-screen overflow-hidden z-20`}
-            style={{ height: 'calc(100vh - 80px)' , top: '80px' }}>
-                <ul className={`space-y-2 ${!isOpen && "lg:block hidden"}`}>
+            <div className={`${isOpen ? "w-64 lg:sticky absolute" : "w-12"} left-0 h-full lg:w-64 w-12  py-4 px-4 overflow-hidden z-20`}>
+                <ul className={`space-y-4 ${!isOpen && "lg:block hidden"}`}>
                     <li>
                         <a
                             href="#"
@@ -69,13 +68,22 @@ export default function Sidebar() {
                         </a>
                     </li>
                     <li>
-                    <Image
-                        className="w-[100%] h-auto rounded-md"
-                        src={"/kitchen2.jpg"}
-                        width={100}
-                        height={100}
-                        alt=""
-                    ></Image>{" "}
+                        <Image
+                            className="w-[100%] h-auto rounded-md"
+                            src={"/kitchen2.jpg"}
+                            width={100}
+                            height={100}
+                            alt=""
+                        ></Image>{" "}
+                    </li>
+                    <li>
+                        <Image
+                            className="w-[100%] h-auto rounded-md"
+                            src={"/kitchen5.jpg"}
+                            width={100}
+                            height={100}
+                            alt=""
+                        ></Image>{" "}
                     </li>
                 </ul>
             </div>

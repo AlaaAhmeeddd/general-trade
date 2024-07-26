@@ -20,6 +20,7 @@ export const navLinks = [
     hasMenu: false,
   },
 ]
+
 export const productsType = [
   {
     title: "Heating",
@@ -51,5 +52,92 @@ export const productsType = [
     title: "Medical",
     href: "/product?type=others",
     imageHref: "/medical.jpg",
+  },
+]
+
+export const products = [
+  {
+    mainImage: "/kitchen2.jpg",
+    items: [
+      {
+        productImage: "/boiler-nobackground.png",
+        title: "Boiler"
+      },
+      {
+        productImage: "/boiler-nobackground.png",
+        title: "Boiler"
+      },
+      {
+        productImage: "/boiler-nobackground.png",
+        title: "Boiler"
+      },
+      {
+        productImage: "/boiler-nobackground.png",
+        title: "Boiler"
+      },
+    ]
+  },
+  {
+    mainImage: "/machine.jpg",
+    items: [
+      {
+        productImage: "/Fire-Extinguisher-nobackground.png",
+        title: "Boiler"
+      },
+      {
+        productImage: "/Fire-Extinguisher-nobackground.png",
+        title: "Boiler"
+      },
+      {
+        productImage: "/Fire-Extinguisher-nobackground.png",
+        title: "Boiler"
+      },
+      {
+        productImage: "/Fire-Extinguisher-nobackground.png",
+        title: "Boiler"
+      },
+    ]
+  },
+  {
+    mainImage: "/kitchen3.jpg",
+    items: [
+      {
+        productImage: "/boiler-nobackground.png",
+        title: "Boiler"
+      },
+      {
+        productImage: "/boiler-nobackground.png",
+        title: "Boiler"
+      },
+      {
+        productImage: "/boiler-nobackground.png",
+        title: "Boiler"
+      },
+      {
+        productImage: "/boiler-nobackground.png",
+        title: "Boiler"
+      },
+    ]
+  },
+  {
+    mainImage: "/machine.jpg",
+    items: [
+      {
+        productImage: "/Fire-Extinguisher-nobackground.png",
+        title: "Boiler"
+      },
+      {
+        productImage: "/Fire-Extinguisher-nobackground.png",
+        title: "Boiler"
+      },
+      {
+        productImage: "/Fire-Extinguisher-nobackground.png",
+        title: "Boiler"
+      },
+      {
+        productImage: "/Fire-Extinguisher-nobackground.png",
+        title: "Boiler"
+      },
+    ]
   },
 ]
