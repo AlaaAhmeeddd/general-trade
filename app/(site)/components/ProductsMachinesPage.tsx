@@ -110,7 +110,7 @@ function Products({ items, name }: Props) {
             {items?.map((item) => (
               <div
                 key={item._id}
-                className="bg-white border border-gray-100 p-3 rounded-md overflow-hidden flex flex-col justify-between md:w-[30%] w-full shadow-md "
+                className="bg-white border border-gray-100 p-3 rounded-md overflow-hidden flex flex-col justify-between md:w-[30%] w-full shadow-md md:flex-1"
               >
                 <div className="relative flex justify-center items-center max-h-[350px] overflow-hidden mx-auto">
                   {item.mainImage ? (

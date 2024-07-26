@@ -1,10 +1,11 @@
 import { getByName } from "@/sanity/sanity-utils";
 import React from "react";
 import Products from "../../components/ProductsMachinesPage";
-import Image from "next/image";
+
 type props = {
   params: { name: string };
 };
+
 async function page({ params }: props) {
   const name = decodeURIComponent(params.name);
   console.log(name);
@@ -12,22 +13,7 @@ async function page({ params }: props) {
   console.log("products", products);
 
   return (
-    <div style={{ paddingTop: "50px" }}>
-      <Image
-        width={400}
-        height={200}
-        src="https://drive.google.com/uc?export=view&id=1iyxzKQmayyP6gcocVJAwhDbhCCOULEge"
-        alt="bg"
-        style={{
-          height: "50vh",
-          objectFit: "cover",
-          width: "100%",
-          position: "absolute",
-          zIndex: "-5",
-          top: "-2%",
-          right: "0",
-        }}
-      />
+    <div>
       <Products items={products} name="products" />
     </div>
   );

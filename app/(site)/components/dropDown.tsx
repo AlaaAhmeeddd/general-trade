@@ -2,7 +2,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import Search from "./Search"
-import { navLinks } from "@/constants"
+import { navLinks, productsType } from "@/constants"
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5"
 
 function DropDown() {
@@ -22,7 +22,7 @@ function DropDown() {
       <nav
         className={`${
           state == true ? "block" : "hidden"
-        } inline-flex lg:hidden flex-col items-center justify-between absolute top-0 left-0 gap-10 bg-secondary p-10 w-full z-[5] pt-[60px] border border-black rounded-lg `}
+        }  shadow-md inline-flex lg:hidden flex-col items-center justify-between absolute top-0 left-0 gap-10 bg-secondary p-10 w-full z-[5] pt-[60px]`}
       >
         <div onClick={handleClick} className="absolute top-6 right-10 ">
           <IoCloseOutline className="text-basic-text w-[25px] h-[25px]" />
@@ -34,13 +34,27 @@ function DropDown() {
           />
           <ul className="flex items-center flex-col justify-center gap-4 mt-6">
             {navLinks.map((link, index) => (
-              <li
-                key={index}
-                onClick={handleClick}
-                className="font-semibold capitalize text-xl text-black"
-              >
-                <Link href={link.href}>{link.title}</Link>
-              </li>
+              <>
+                {
+                  link.title === "products" ?
+                  productsType.map((type, index)=>(
+                    <li
+                      key={index}
+                      onClick={handleClick}
+                      className="font-semibold capitalize text-xl text-basic-text"
+                    >
+                      <Link href={type.href}>{type.title}</Link>
+                    </li>
+                  )) : 
+                  <li
+                    key={index}
+                    onClick={handleClick}
+                    className="font-semibold capitalize text-xl text-basic-text"
+                  >
+                    <Link href={link.href}>{link.title}</Link>
+                  </li>
+                }
+              </>
             ))}
           </ul>
         </div>
