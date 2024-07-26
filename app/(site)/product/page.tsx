@@ -1,5 +1,7 @@
+"use client"
 import React, { Suspense } from "react"
 import SearchByType from "./SearchByType"
+import useProducts from "@/hooks/use-products"
 const Loading = () => {
   return (
     <div className="relative min-h-screen w-full z-[10] flex justify-center items-center gap-8 flex-col ">
@@ -12,7 +14,7 @@ const Loading = () => {
     </div>
   )
 }
-export default function page() {
+export default function Page() {
   return (
     <div>
       <Suspense fallback={<Loading />}>

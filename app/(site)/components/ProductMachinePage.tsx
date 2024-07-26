@@ -13,7 +13,6 @@ type props = {
 
 function ProductMachinePage({ product }: props) {
   const { products, isLoading } = useProducts(product.type)
-  console.log(product.type)
   if (product == null) {
     return notFound()
   } else {
