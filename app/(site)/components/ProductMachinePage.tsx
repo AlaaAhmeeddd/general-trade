@@ -5,10 +5,7 @@ import Link from "next/link"
 import Images from "./Images"
 import ProductMachineType from "@/types/Product"
 import { notFound } from "next/navigation"
-import { PiCertificateFill } from "react-icons/pi"
-import { AiFillSafetyCertificate } from "react-icons/ai"
-import { MdLocalShipping } from "react-icons/md"
-import { BsTransparency } from "react-icons/bs"
+
 import Similer from "./SimilerProudcts"
 import useProducts from "@/hooks/use-products"
 import FeatureHighlights from "./FeatureHighlights"
@@ -92,9 +89,11 @@ function ProductMachinePage({ product }: props) {
             {/* <div>
             <span className="font-medium">Tags:</span> Bracelet, Accessories
           </div> */}
+            {/* <a href="mailto:GENERAL2M@YAHOO.COM"> */}
             <button className="mt-4 bg-black hover:bg-gold-700 text-white font-bold py-2 px-2 rounded ">
               Email Us
             </button>
+            {/* </a> */}
           </div>
         </div>
         <FeatureHighlights />
