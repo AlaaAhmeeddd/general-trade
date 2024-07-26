@@ -7,7 +7,7 @@ export const navLinks = [
   {
     title: "products",
     href: "/product?type=hot",
-    hasMenu: true,
+    hasMenu: false,
   },
   {
     title: "about us",
