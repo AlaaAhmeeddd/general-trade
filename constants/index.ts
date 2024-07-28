@@ -37,22 +37,6 @@ export const productsType = [
     href: "/product?type=utensils",
     imageHref: "/kitchen3.jpg",
   },
-
-  {
-    title: "Boilers & Burners",
-    href: "/product?type=burner",
-    imageHref: "/boilers.jpg",
-  },
-  {
-    title: "Fire Extinguisher",
-    href: "/product?type=boiler",
-    imageHref: "/fire extinguisher2.jpg",
-  },
-  {
-    title: "Medical",
-    href: "/product?type=others",
-    imageHref: "/medical.jpg",
-  },
 ]
 
 export const products = [
@@ -60,20 +44,20 @@ export const products = [
     mainImage: "/kitchen2.jpg",
     items: [
       {
-        productImage: "/Fire-Extinguisher-nobackground.png",
-        title: "Boiler",
+        productImage: "/kitchen7.jpg",
+        title: "Kitchen",
       },
       {
-        productImage: "/Fire-Extinguisher-nobackground.png",
-        title: "Boiler",
+        productImage: "/kitchen6.jpg",
+        title: "Kitchen",
       },
       {
-        productImage: "/Fire-Extinguisher-nobackground.png",
-        title: "Boiler",
+        productImage: "/kitchen5.jpg",
+        title: "Kitchen",
       },
       {
-        productImage: "/Fire-Extinguisher-nobackground.png",
-        title: "Boiler",
+        productImage: "/kitchen4.jpg",
+        title: "Kitchen",
       },
     ],
   },
@@ -102,41 +86,20 @@ export const products = [
     mainImage: "/kitchen3.jpg",
     items: [
       {
-        productImage: "/boiler-nobackground.png",
-        title: "Boiler",
+        productImage: "/Gas.jpg",
+        title: "kitchen",
       },
       {
-        productImage: "/boiler-nobackground.png",
-        title: "Boiler",
+        productImage: "/machine.jpg",
+        title: "kitchen",
       },
       {
-        productImage: "/boiler-nobackground.png",
-        title: "Boiler",
+        productImage: "/p3.jpg",
+        title: "kitchen",
       },
       {
-        productImage: "/boiler-nobackground.png",
-        title: "Boiler",
-      },
-    ],
-  },
-  {
-    mainImage: "/machine.jpg",
-    items: [
-      {
-        productImage: "/Fire-Extinguisher-nobackground.png",
-        title: "Boiler",
-      },
-      {
-        productImage: "/Fire-Extinguisher-nobackground.png",
-        title: "Boiler",
-      },
-      {
-        productImage: "/Fire-Extinguisher-nobackground.png",
-        title: "Boiler",
-      },
-      {
-        productImage: "/Fire-Extinguisher-nobackground.png",
-        title: "Boiler",
+        productImage: "/kitchen3.jpg",
+        title: "kitchen",
       },
     ],
   },

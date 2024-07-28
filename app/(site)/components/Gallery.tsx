@@ -20,7 +20,7 @@ export default function Gallery() {
             </div>
             <div>
               <Image
-                src="/fire extinguisher2.jpg"
+                src="/kitchen.jpg"
                 className="h-auto max-w-full rounded-lg hover:scale-90 transition-all"
                 alt=""
                 width={500}
@@ -31,7 +31,7 @@ export default function Gallery() {
           <div className="flex flex-col gap-4">
             <div>
               <Image
-                src="/boilers.jpg"
+                src="/kitchen7.jpg"
                 className="h-auto max-w-full rounded-lg hover:scale-90 transition-all"
                 alt=""
                 width={500}
@@ -60,7 +60,7 @@ export default function Gallery() {
             </div>
             <div>
               <Image
-                src="/medical.jpg"
+                src="/kitchen6.jpg"
                 className="h-auto max-w-full rounded-lg hover:scale-90 transition-all"
                 alt=""
                 width={500}

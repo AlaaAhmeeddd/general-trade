@@ -25,7 +25,7 @@ export default function Categories() {
               },
               960:{
                 spaceBetween: 20,
-                slidesPerView: 4,
+                slidesPerView: 3,
               }
             }}
           spaceBetween={20}
