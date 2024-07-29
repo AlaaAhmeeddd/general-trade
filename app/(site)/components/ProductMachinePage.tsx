@@ -97,80 +97,14 @@ function ProductMachinePage({ product }: props) {
         <FeatureHighlights />
         <Similer items={products} />
       </div>
-      // <div className="bg-secondary ">
-      //   <div className="container mx-auto py-20 px-[10px] flex justify-between flex-col gap-20 pt-[200px] ">
-      //     <div className="flex flex-col items-start justify-between gap-10 lg:flex-row">
-      //       <div className="flex gap-6 flex-col pt-[10%]">
-      //         <h1 className="text-4xl font-bold text-gray-200">
-      //           {product.name}
-      //         </h1>
-      //         <p className="text-lg  text-gray-600">{product.description}</p>
-      //       </div>
-      //       <Image
-      //         src={product.mainImage}
-      //         alt="image"
-      //         width={500}
-      //         height={500}
-      //         className="bg-white shadow-2xl rounded-2xl "
-      //       />
-      //     </div>
-      //     {product.url && (
-      //       <div className="flex flex-col gap-4">
-      //         <Link
+
       //           href={product.url || "/"}
-      //           target="_blank"
-      //           rel="noopener noreferrer"
-      //           className="bg-red-700 text-white px-3 py-2 text-center rounded-[30px] flex-1 text-lg font-semibold"
-      //         >
-      //           youtube video
-      //         </Link>
-      //         <hr />
-      //       </div>
-      //     )}
-      //     <div className="flex justify-between items-start gap-10 flex-col lg:flex-row max-w-[120%]">
-      //       <div className="max-w-full sm:max-w-[50%]">
-      //         <div className="flex flex-col gap-4 ">
+
       //           {product.content && (
-      //             <>
-      //               <h1 className="text-3xl font-bold uppercase md:text-5xl ">
-      //                 Specifications
-      //               </h1>
-      //               <hr />
-      //               <div className="flex flex-col gap-6 py-4 text-lg">
-      //                 <PortableText value={product.content} />
-      //               </div>
-      //             </>
-      //           )}
-      //         </div>
-      //         <div className="flex flex-col gap-4">
+
       //           {product.features && (
-      //             <>
-      //               <h1 className="text-3xl font-bold uppercase md:text-5xl ">
-      //                 features
-      //               </h1>
-      //               <hr />
-      //               <div className="flex flex-col gap-6 py-4 text-lg ">
-      //                 <PortableText value={product.features} />
-      //               </div>
-      //             </>
-      //           )}
-      //         </div>
-      //       </div>
-      //       <div className="w-full xvw">
+
       //         {product.table && (
-      //           <Image
-      //             src={product.table}
-      //             alt="image"
-      //             className="object-cover w-full h-full rounded-lg"
-      //             width={1500}
-      //             height={800}
-      //           />
-      //         )}
-      //         <Images product={product} />
-      //       </div>
-      //     </div>
-      //   </div>
-      // </div>
     )
   }
 }

@@ -4,14 +4,13 @@ import ProductMachineType from "@/types/Product"
 /* fetching data using groq all projects */
 async function getProducts(type: string | null): Promise<ProductMachineType[]> {
   const client = createClient({
-    projectId: "ttl8khpq",
+    projectId: "tbnw8lmd",
     apiVersion: "2023-07-19",
     dataset: "production",
   })
 
   let query
   let params = {}
-  // Machine
 
   if (type) {
     query = groq`*[_type=="Product" && type == $type] {
@@ -48,7 +47,7 @@ async function getProducts(type: string | null): Promise<ProductMachineType[]> {
 /* fetching data using groq specific projects */
 async function getProduct(id: string): Promise<ProductMachineType> {
   return createClient({
-    projectId: "ttl8khpq",
+    projectId: "tbnw8lmd",
     apiVersion: "2023-07-19",
     dataset: "production",
   }).fetch(
@@ -69,95 +68,11 @@ async function getProduct(id: string): Promise<ProductMachineType> {
   )
 }
 
-async function getMachines(type: string | null): Promise<ProductMachineType[]> {
-  const client = createClient({
-    projectId: "ttl8khpq",
-    apiVersion: "2023-07-19",
-    dataset: "production",
-  })
-
-  let query
-  let params = {}
-  if (type) {
-    query = groq`*[_type=="Machine" && type == $type] {
-      _id,
-      _createdAt,
-      name,
-      "mainImage": mainImage.asset->url,
-      secImages,
-      url,
-      content,
-      features,
-      category,
-      description
-    }`
-    params = { type }
-  } else {
-    query = groq`*[_type=="Machine"] {
-      _id,
-      _createdAt,
-      name,
-      "mainImage": mainImage.asset->url,
-      secImages,
-      url,
-      content,
-      features,
-      category,
-      description
-    }`
-  }
-  return client.fetch(query, params)
-
-  return createClient({
-    projectId: "ttl8khpq",
-    apiVersion: "2023-07-19",
-    dataset: "production",
-  }).fetch(
-    groq`*[_type=="Machine"]
-    {
-      _id,
-      _createdAt,
-      name,
-      "mainImage" : mainImage.asset->url,
-      secImages,
-      url,
-      content,
-      features,
-      category,
-      description,
-    }`
-  )
-}
-
-/* fetching data using groq specific projects */
-async function getMachine(id: string): Promise<ProductMachineType> {
-  return createClient({
-    projectId: "ttl8khpq",
-    apiVersion: "2023-07-19",
-    dataset: "production",
-  }).fetch(
-    groq`*[_type == "Machine" && _id == $id][0]
-    {
-      _id, 
-      _createdAt,
-      name,
-      "mainImage" : mainImage.asset->url,
-      secImages,
-      "table" : table.asset->url,
-      url,
-      content,
-      features,
-      description,
-      category,
-    }`,
-    { id }
-  )
-}
 async function getByName(name: string): Promise<ProductMachineType[]> {
   const lowercasedName = name.toLowerCase()
 
   return createClient({
-    projectId: "ttl8khpq",
+    projectId: "tbnw8lmd",
     apiVersion: "2023-07-19",
     dataset: "production",
   }).fetch(
@@ -177,4 +92,5 @@ async function getByName(name: string): Promise<ProductMachineType[]> {
     { lowercasedName }
   )
 }
-export { getProducts, getProduct, getMachines, getMachine, getByName }
+
+export { getProducts, getProduct, getByName }

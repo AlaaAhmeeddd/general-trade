@@ -43,16 +43,11 @@ const Product = {
       type: "string",
       options: {
         list: [
-          { title: "heating", value: "heating" },
+          { title: "hot", value: "hot" },
           { title: "cold", value: "cold" },
-          { title: "kitchen", value: "kitchen" },
-          { title: "laundry", value: "laundry" },
-          { title: "boiler", value: "boiler" },
-          { title: "others", value: "others" },
-          { title: "castle", value: "castle" },
-          { title: "burner", value: "burner" },
+
           { title: "utensils", value: "utensils" },
-          { title: "coffe", value: "coffe" },
+          // { title: "coffe", value: "coffe" },
         ],
       },
     },

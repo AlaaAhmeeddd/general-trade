@@ -4,18 +4,7 @@ import { getProducts } from "@/sanity/sanity-utils"
 import ProductMachineType from "@/types/Product"
 import { useEffect, useState } from "react"
 
-export type TQuery =
-  | "heating"
-  | "cold"
-  | "kitchen"
-  | "laundary"
-  | "castle"
-  | "boiler"
-  | "others"
-  | "Prouducts"
-  | "burner"
-  | "utensils"
-  | "coffe"
+export type TQuery = "hot" | "cold" | "utensils"
 
 export default function useProducts(typeQuery: string) {
   const [products, setProducts] = useState<ProductMachineType[]>([])

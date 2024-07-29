@@ -40,85 +40,22 @@ function Products({ items, name }: Props) {
             </p>
           </div>
         )}
-        <div className="flex flex-row">
-          {/* <div className="left-0 sticky top-0 w-64 bg-white">
-            <ul className="space-y-1">
-              <li>
-                <a
-                  href="#"
-                  className="block rounded-lg bg-secondary px-4 py-2 text-sm font-medium text-gray-700"
-                >
-                  General
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-secondary hover:text-gray-700"
-                >
-                  Teams
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-secondary hover:text-gray-700"
-                >
-                  Billing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-secondary hover:text-gray-700"
-                >
-                  Invoices
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-secondary hover:text-gray-700"
-                >
-                  Account
-                </a>
-              </li>
-              <li>
-                <Image
-                  className="w-[100%] h-auto"
-                  src={"/kitchen2.jpg"}
-                  width={100}
-                  height={100}
-                  alt=""
-                ></Image>{" "}
-              </li>
 
-              <li>
-                <Image
-                  className="w-[100%]"
-                  src={"/kitchen.jpg"}
-                  width={100}
-                  height={100}
-                  alt=""
-                ></Image>{" "}
-              </li>
-            </ul>
-          </div> */}
-
-          <div className="flex justify-center items-stretch gap-8 px-4 flex-wrap mt-8">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
             {items?.map((item) => (
               <div
                 key={item._id}
-                className="bg-white border border-gray-100 p-3 rounded-md overflow-hidden flex flex-col justify-between md:w-[30%] w-full shadow-md md:flex-1"
+                className="bg-white border border-gray-100 p-3 rounded-md overflow-hidden flex flex-col justify-between shadow-md"
               >
-                <div className="relative flex justify-center items-center max-h-[350px] overflow-hidden mx-auto">
+                <div className="flex justify-center items-center max-h-[350px] overflow-hidden mx-auto pt-20">
                   {item.mainImage ? (
                     <Image
                       src={item.mainImage}
                       alt="image"
                       width={250}
                       height={350}
-                      className=" bg-contain h-fit"
+                      className="bg-contain h-fit"
                     />
                   ) : (
                     <></>
@@ -129,21 +66,16 @@ function Products({ items, name }: Props) {
                   <div>
                     <div
                       title={item.name}
-                      className="font-semibold md:text-xl truncate "
+                      className="font-semibold md:text-xl truncate"
                     >
                       {item.name}
                     </div>
                     {item.category === "" && (
-                      <div className=" text-gray-500"> {item.description}</div>
+                      <div className="text-gray-500"> {item.description}</div>
                     )}
                   </div>
 
-                  <Link
-                    href={`/${
-                      item.category === "machine" ? "machine" : "product"
-                    }/${item._id}`}
-                    className="btn-more  "
-                  >
+                  <Link href={`/product/${item._id}`} className="btn-more">
                     See More
                   </Link>
                 </div>
