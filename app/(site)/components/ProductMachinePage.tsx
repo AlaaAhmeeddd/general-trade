@@ -7,6 +7,7 @@ import { notFound } from "next/navigation"
 import Similer from "./SimilerProudcts"
 import useProducts from "@/hooks/use-products"
 import FeatureHighlights from "./FeatureHighlights"
+import Link from "next/link"
 type props = {
   product: ProductMachineType
 }
@@ -84,13 +85,22 @@ function ProductMachinePage({ product }: props) {
               <span className="font-medium text-black">Category:</span>{" "}
               {product.category}
             </div>
-            {/* <div>
-            <span className="font-medium">Tags:</span> Bracelet, Accessories
-          </div> */}
-            {/* <a href="mailto:GENERAL2M@YAHOO.COM"> */}
-            <button className="mt-4 bg-black hover:bg-gold-700 text-white font-bold py-2 px-2 rounded ">
-              Email Us
-            </button>
+
+            <Link
+              href="mailto:general2m@yahoo.com"
+              className="flex items-center space-x-2 btn-more mt-2"
+            >
+              <svg
+                className="h-6 w-6 "
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M12 13.5l-8-6V6l8 6 8-6v1.5l-8 6z" />
+                <path d="M4 8v10h16V8l-8 6-8-6z" />
+              </svg>
+              <span className="text-center">Email Us</span>
+            </Link>
             {/* </a> */}
           </div>
         </div>
