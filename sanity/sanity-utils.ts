@@ -3,45 +3,64 @@ import ProductMachineType from "@/types/Product"
 
 /* fetching data using groq all projects */
 async function getProducts(type: string | null): Promise<ProductMachineType[]> {
-  const client = createClient({
+  // const client = createClient({
+  //   projectId: "tbnw8lmd",
+  //   apiVersion: "2023-07-19",
+  //   dataset: "production",
+  // })
+
+  // let query
+  // let params = {}
+
+  // if (type) {
+  //   query = groq`*[_type == "Product" && type == $type] {
+  //     _id,
+  //     _createdAt,
+  //     name,
+  //     "mainImage": mainImage.asset->url,
+  //     secImages,
+  //     url,
+  //     content,
+  //     features,
+  //     category,
+  //     description
+  //   }`
+  //   params = { type }
+  // } else {
+  //   query = groq`*[_type == "Product"] {
+  //     _id,
+  //     _createdAt,
+  //     name,
+  //     "mainImage": mainImage.asset->url,
+  //     secImages,
+  //     url,
+  //     content,
+  //     features,
+  //     category,
+  //     description
+  //   }`
+  // }
+
+  // return client.fetch(query, params)
+    return createClient({
     projectId: "tbnw8lmd",
     apiVersion: "2023-07-19",
     dataset: "production",
-  })
-
-  let query
-  let params = {}
-
-  if (type) {
-    query = groq`*[_type == "Product" && type == $type] {
+  }).fetch(
+    groq`*[_type == "Product"]
+    {
       _id,
       _createdAt,
       name,
-      "mainImage": mainImage.asset->url,
+      "mainImage" : mainImage.asset->url,
       secImages,
       url,
       content,
       features,
+      description,
       category,
-      description
     }`
-    params = { type }
-  } else {
-    query = groq`*[_type == "Product"] {
-      _id,
-      _createdAt,
-      name,
-      "mainImage": mainImage.asset->url,
-      secImages,
-      url,
-      content,
-      features,
-      category,
-      description
-    }`
-  }
-
-  return client.fetch(query, params)
+  )
 }
 
 /* fetching data using groq specific projects */
