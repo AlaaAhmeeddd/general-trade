@@ -26,7 +26,8 @@ async function getProducts(type: string | null): Promise<ProductMachineType[]> {
       description
     }`
     params = { type }
-  } else {
+  } 
+  else {
     query = groq`*[_type == "Product"] {
       _id,
       _createdAt,
@@ -40,7 +41,6 @@ async function getProducts(type: string | null): Promise<ProductMachineType[]> {
       description
     }`
   }
-
 }
 
 /* fetching data using groq specific projects */
