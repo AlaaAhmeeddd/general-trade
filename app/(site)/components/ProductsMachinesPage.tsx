@@ -12,92 +12,78 @@ type Props = {
 }
 
 function Products({ items, name }: Props) {
-  const [popupItme, setPopupItem] = useState("")
-  const [toggle, setToggle] = useState(false)
-  // const [pname, setName] = useState("Machines")
-
   return (
-    <>
-      <div className=" flex justify-start items-center flex-col min-h-[70vh]">
+    <div className="flex min-h-[70vh]">
+      {/* <div className="lg:block hidden min-h-[70vh] border-r shadow-lg z-10">
+        <Sidebar />
+      </div> */}
+      <div className="pb-20 md:pt-0 pt-16 flex flex-col items-center flex-1">
         <h1
-          className={`text-[20px] md:text-[40px] lg:text-[80px]  font-bold text-center text-gray-300 sm:text-white pt-28`}
+          className={`text-[30px] mt-8 md:text-[40px] lg:text-[60px] font-bold text-center text-basic-text  `}
         >
           {name}
         </h1>
-
         {items.length !== 0 ? (
-          <div className="text-white text-xl m-5">
+          <div className="text-basic-text text-center text-xl m-5">
             <>
               {items.length == 0
                 ? "No Items founded"
-                : `Items( ${items.length} ) found`}
+                : `${items.length} Items found`}
             </>
           </div>
         ) : (
           <div className="">
-            <p className="text-white text-3xl font-bold m-5 ">
+            <p className="text-basic-text text-center text-3xl font-bold m-5 ">
               {" "}
               Ops, no items founded
             </p>
           </div>
         )}
-        <div className=" container mx-auto flex flex-col lg:flex-row justify-center items-stretch gap-8 px-4  flex-wrap">
-          {items?.map((item) => (
-            <div
-              key={item._id}
-              className="bg-white rounded-3xl overflow-hidden flex flex-col gap-10 justify-between lg:w-[46%] xl:w-[30%] shadow-2xl "
-            >
-              <div className="flex justify-center items-center max-h-[350px] overflow-hidden mx-auto pt-20">
-                {item.mainImage ? (
-                  <Image
-                    src={item.mainImage}
-                    alt="image"
-                    width={250}
-                    height={350}
-                    className=" bg-contain h-fit"
-                  />
-                ) : (
-                  <></>
-                )}
-              </div>
-              <div className="flex flex-col gap-6 px-5 pb-10 justify-between">
-                <div>
-                  <div
-                    title={item.name}
-                    className="font-bold text-lg md:text-2xl w-72 truncate "
-                  >
-                    {item.name}
-                  </div>
-                  {item.category === "" && (
-                    <div className=" text-gray-500"> {item.description}</div>
+
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            {items?.map((item) => (
+              <div
+                key={item._id}
+                className="bg-white border border-gray-100 p-3 rounded-md overflow-hidden flex flex-col justify-between shadow-md"
+              >
+                <div className="flex justify-center items-center max-h-[350px] overflow-hidden mx-auto pt-20">
+                  {item.mainImage ? (
+                    <Image
+                      src={item.mainImage}
+                      alt="image"
+                      width={250}
+                      height={350}
+                      className="bg-contain h-fit"
+                    />
+                  ) : (
+                    <></>
                   )}
                 </div>
-                {item.category === "machine" ? (
-                  <Link
-                    href={`/${
-                      item.category === "machine" ? "machine" : "product"
-                    }/${item._id}`}
-                    className="btn-more  "
-                  >
+
+                <div className="flex flex-col gap-5 px-5 py-6 justify-between bg-gray-100 rounded-md mt-6">
+                  <div>
+                    <div
+                      title={item.name}
+                      className="font-semibold md:text-xl truncate"
+                    >
+                      {item.name}
+                    </div>
+                    {item.category === "" && (
+                      <div className="text-gray-500"> {item.description}</div>
+                    )}
+                  </div>
+
+                  <Link href={`/product/${item._id}`} className="btn-more">
                     See More
                   </Link>
-                ) : (
-                  <button
-                    className="btn-more"
-                    onClick={() => {
-                      setPopupItem(item._id)
-                      setToggle(true)
-                    }}
-                  >
-                    See more
-                  </button>
-                )}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
