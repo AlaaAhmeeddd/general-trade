@@ -41,6 +41,7 @@ async function getProducts(type: string | null): Promise<ProductMachineType[]> {
       description
     }`
   }
+  return client.fetch(query, params)
 }
 
 /* fetching data using groq specific projects */
