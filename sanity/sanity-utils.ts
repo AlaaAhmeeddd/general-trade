@@ -13,7 +13,7 @@ async function getProducts(type: string | null): Promise<ProductMachineType[]> {
   let params = {}
 
   if (type) {
-    query = groq`*[_type=="Product" && type == $type] {
+    query = groq`*[_type == "Product" && type == $type] {
       _id,
       _createdAt,
       name,
@@ -27,7 +27,7 @@ async function getProducts(type: string | null): Promise<ProductMachineType[]> {
     }`
     params = { type }
   } else {
-    query = groq`*[_type=="Product"] {
+    query = groq`*[_type == "Product"] {
       _id,
       _createdAt,
       name,
